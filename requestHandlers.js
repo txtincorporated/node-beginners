@@ -13,7 +13,7 @@ function start(response) {
   '<body>'+
   '<form action="/upload" enctype="multipart/form-data" '+ 
   'method="post">'+
-  'input type="file" name="upload" multiple="multiple">'+
+  '<input type="file" name="upload" multiple="multiple">'+
   '<input type="submit" value="Upload file" />'+
   '</form>'+
   '</body>'+
@@ -29,14 +29,14 @@ function upload(response, request) {
 
   var form = new formidable.IncomingForm();
   console.log('About to parse');
-  fomr.parse(request, function(error, fields, files) {
+  form.parse(request, function(error, fields, file) {
     console.log('parsing done');
     /* Possible error on Windows systems: 
     tried to rename to an already existing file*/
-    fs.rename(files.upload.path, './tmp/test.png', function(error) {
+    fs.rename(file.upload.path, './tmp/test.png', function(error) {
       if(error) {
         fs.unlink('./tmp/test.png');
-        fs.rename(files.upload.path, './tmp/test.png');
+        fs.rename(file.upload.path, './tmp/test.png');
       }
     });
   });
