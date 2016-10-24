@@ -1,0 +1,31 @@
+{
+  "name": "nodebeginners",
+  "version": "1.0.0",
+  "description": "simple file upload app",
+  "main": "index.js",
+  "dependencies": {
+    "formidable": "^1.0.17"
+  },
+  "devDependencies": {
+    "formidable": "^1.0.17"
+  },
+  "scripts": {
+    "test": "mocha",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/txtincorporated/node-beginners.git"
+  },
+  "keywords": [
+    "image",
+    "file",
+    "upload"
+  ],
+  "author": "Manuel Kiesling",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/txtincorporated/node-beginners/issues"
+  },
+  "homepage": "https://github.com/txtincorporated/node-beginners#readme"
+}
